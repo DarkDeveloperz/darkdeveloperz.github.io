@@ -1,0 +1,131 @@
+@background-color: white;
+
+body,html{
+	background: @background-color;
+	font-family:'Roboto';
+}
+
+.hand{
+	cursor: pointer;
+}
+
+ul,li {
+  list-style-type: none;
+  text-align: left;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.demo{
+	color: #178be7;
+	background-color: white;
+	border: 2px solid #178be7;
+	border-radius: 500px;
+	padding: 5px;
+	padding-left: 7px;
+	padding-right: 7px;
+	transition: all 300ms ease-in; 
+
+	&:hover{
+		color: white;
+		background-color: #178be7;
+	}
+}
+
+.product:extend(.demo){
+	border: 2px solid white;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	&:hover{
+		background-color: #f1f4f7;
+	}
+}
+
+.trial:extend(.demo){
+	color: white;
+	background-color: #178be7;
+
+	&:hover{
+		background-color:#157dd0;
+	}
+}
+
+.right{
+	float: right;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+h4{
+	color: white;
+}
+
+.demo1:extend(.demo){
+	color: white;
+	background-color: #178be7;
+	border:1px solid white;
+	&:hover{
+		color:#178be7;
+		background-color: white;
+	}
+}
+
+body::-webkit-scrollbar {
+        width: 0 !important;
+}
+
+.banner_btn:extend(.demo){
+	color: white;
+	background-color: transparent;
+	border-color: white;
+
+	&:hover{
+		color: black;
+		background-color: white;
+	}
+}
+
+input[type="range"] {
+    width: 100%;
+    height: 28px; 
+    -webkit-appearance: none; 
+    outline: none;
+    border: 0; 
+    padding: 0 8px;
+    margin: 8px 0;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #178be7;
+    height: 4px; 
+    border-radius: 4px; 
+    transition: 0.3s;
+}
+
+input[type="range"]:hover::-webkit-slider-runnable-track,
+input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: #178be7; 
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #178be7;
+    width: 28px; 
+    height: 28px; 
+    border-radius: 50%;
+    margin-top: -12px; 
+    cursor: pointer;
+    border: 4px solid #fff; 
+    transition: 0.3s;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb,
+input[type="range"]:focus::-webkit-slider-thumb {
+    background: #178be7; 
+}
