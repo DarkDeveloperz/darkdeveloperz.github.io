@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#ff512f"/>
+  <meta name="description" content="Akash Tripathi creates websites, web applications and desktop applications. Have a look at the portfolio and get in touch to know more about him.">
+  <meta name="keywords" content="Akash Tripathi Angular App">  
+  <meta name="author" content="Akash Tripathi">
+  
+  <title>Akash Tripathi | Software Developer + Graphics Designer</title>  
+  
+  <link rel="icon" href="dd2.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+
+<body class="pink-gradient">
+
+<div ng-app="myApp" ng-controller="namesCtrl" class="container" style="padding-top: 20%;">
+
+    <div class="row">
+
+    <div class="col-lg-11 col-md-11 col-sm-11 col-11">
+    <center>
+    <input type="text" placeholder="Location" ng-model="test" ng-click="showMe=true;" class="tf" ng-value=value>
+    </center>
+    </div>
+
+    <div class="col-lg-1 col-md-1 col-sm-1 col-1" style="margin-top: 5px;">
+    <i ng-click="addItem()" class="fas fa-search-location hand" style="color: #0000004f;"></i>  <!-- ng-mouseleave="showMe=false" -->
+    </div>
+
+    </div>
+
+    <br>
+
+    <ul>
+    <li style="display: inline;" ng-repeat="s in states">
+    <button ng-show="btn_show">{{s}} &nbsp; <i ng-click="close($index)" class="fas fa-times" style="color: #0000004f;"></i></button>
+    </li>
+    </ul>
+
+    <p>{{errortext}}</p>
+
+    <br>
+
+<ul ng-show="showMe">
+  <li class="hand" ng-repeat="x in names | filter:test" ng-click="selected(x)">
+    {{ x }}
+  </li>
+</ul>
+
+
+</div>
+
+<script>
+angular.module('myApp', []).controller('namesCtrl', function($scope) {
+    $scope.showMe = false;
+    $scope.btn_show = false;
+
+    $scope.names = [
+        'Jammu and Kashmir',
+        'Himachal Pradesh',
+        'Haryana',
+        'Rajasthan',
+        'Delhi',
+        'Uttar Pradesh',
+        'Bihar',
+        'West Bengal',
+        'Assam'
+    ];
+
+    $scope.states = [
+    //insert value in this array dynamically
+    ];
+
+    $scope.selected = function(x) {
+    $scope.value = x;
+    $scope.showMe = false;
+    $scope.btn_show = true;
+
+    $scope.addButton();
+  }
+
+  $scope.close = function(index) {
+    $scope.value = null;
+   // $scope.btn_show = false;
+    $scope.states.splice(index, 1);
+  }
+
+    $scope.addItem = function () {
+     $scope.errortext = "";
+     if (!$scope.test) {return;}
+    if ($scope.names.indexOf($scope.test) == -1) {
+      $scope.names.push($scope.test);
+      $scope.states.push($scope.test);
+     $scope.addButton();
+    } else {
+      $scope.errortext = "The item is already in your shopping list.";
+    }
+     //$scope.names.push($scope.test);
+     
+  } 
+
+  $scope.addButton = function () {
+     $scope.states.push($scope.value);
+  } 
+
+});
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

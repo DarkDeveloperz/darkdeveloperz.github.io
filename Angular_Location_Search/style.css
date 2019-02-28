@@ -1,0 +1,59 @@
+body,
+html {
+  font-family: 'Roboto';
+}
+
+.pink-gradient{
+background: #FF512F;  
+background: -webkit-linear-gradient(to right, #DD2476, #FF512F);  
+background: linear-gradient(to right, #DD2476, #FF512F); 
+}
+
+.tf{
+	background-color: transparent;
+	border-radius: 50px;
+	border-color: #0000004f;
+	color: white;
+	width: 100%;
+	padding-left: 10px;
+}
+
+.hand {
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style-type: none;
+  text-align: left;
+  color: white;
+  margin:0;
+  padding:0;
+}
+
+input:focus,button:focus {
+  outline: 0;
+}
+
+::placeholder { 
+  color: black;
+  opacity: 0.5; 
+}
+
+button{
+	border-radius: 50px;
+	border-color: #0000004f;
+	background-color: transparent;
+	border-width: 1px;
+	color: white;
+}
+
+::-moz-selection { 
+  color: #ff512f;
+  background: #de2575;
+}
+
+::selection {
+  color: #ff512f;
+  background: #de2575;
+}
