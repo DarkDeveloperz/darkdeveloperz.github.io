@@ -11,11 +11,11 @@
 - 🥅 2021 Goals: Keep Developing.
 - ⚡ Fun fact: I love UI/UX.
 
-### Spotify Playing 🎧
+#### Spotify Playing 🎧
 
 [<img src="https://now-playing-codestackr.vercel.app/api/spotify-playing" alt="DarkDeveloper Spotify Playing" width="350" />](https://open.spotify.com/user/swyqyimdc12jajde4vpwd2x1b)
 
-### Connect with me:
+#### Connect with me:
 
 [<img align="left" alt="darkdeveloperz.github.io" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
 
@@ -28,7 +28,7 @@
 
 <br />
 
-### Languages and Tools:
+#### Languages and Tools:
 
 [<img align="left" alt="Visual Studio Code" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" />][website]
 [<img align="left" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />][website]
@@ -48,7 +48,7 @@
 
 ---
 
-### 📺 Latest Projects
+#### 📺 Latest Projects
 
 - [My Portfolio Website| HTML, CSS, JavaScript, AngularJS](https://darkdeveloperz.github.io/)
 - [Another Website](https://darkdeveloperz.github.io/Noor_Chahal/)
